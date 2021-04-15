@@ -1,0 +1,12 @@
+{
+  "name": "first-cordova-plugin",
+  "version": "1.0.0",
+  "cordova": {
+    "id": "first-cordova-plugin",
+    "platforms": [
+      "android",
+      "ios",
+    ]
+  },
+  "description": "My first cordova plugin."
+}
