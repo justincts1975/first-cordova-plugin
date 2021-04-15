@@ -11,9 +11,5 @@
          "name": "cordova",
          "version": ">=3.4.0"
       }
-   ],
-   "dependencies": {
-      "@ionic-native/core": "^5.32.0",
-      "gulp": "^4.0.2"
-   }
+   ]
 }

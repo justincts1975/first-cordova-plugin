@@ -1,8 +1,8 @@
-#import "MyCordovaPlugin.h"
+#import "FirstCordovaPlugin.h"
 
 #import <Cordova/CDVAvailability.h>
 
-@implementation MyCordovaPlugin
+@implementation FirstCordovaPlugin
 
 - (void)pluginInitialize {
 }
