@@ -1,24 +1,23 @@
-function FirstCordovaPlugin_echo (phrase, win, fail) {
+var PLUGIN_NAME = 'FirstCordovaPlugin';
+
+var FirstCordovaPlugin = {
+  echo: function(phrase, cb) {
     console.log('FROM JAVASCRIPT: ' + phrase);
     setTimeout(function () {
-        if (win) {
-            win();
+        if (success) {
+            success();
         }
     }, 0);
-}
-function FirstCordovaPlugin_getDate (win, fail) {
-    console.log('FROM JAVASCRIPT: ' + phrase);
+	return true;
+  },
+  getDate: function(cb, success, fail) {
     setTimeout(function () {
-        if (win) {
-            win(getdate());
+        if (success) {
+            success(Date().toString());
         }
     }, 0);
-}
-
-
-module.exports = {
-    echo: FirstCordovaPlugin_echo,
-    getDate: FirstCordovaPlugin_getDate
+	return true;
+  }
 };
 
-require('cordova/exec/proxy').add('FirstCordovaPlugin', module.exports);
+module.exports = FirstCordovaPlugin;
