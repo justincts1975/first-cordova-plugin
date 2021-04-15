@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     id="first-cordova-plugin"
     version="1.0.0">
     <name>First Cordova Plugin</name>
@@ -10,14 +11,20 @@
     <repo>https://github.com/justincts1975/first-cordova-plugin.git</repo>
     <issue>https://github.com/justincts1975/first-cordova-plugin/issues</issue>
 
+    <engines>
+        <engine name="cordova" version=">=7.1.0"/>
+        <engine name="cordova-android" version=">=7.0.0"/>
+        <engine name="cordova-ios" version=">=4.5.0"/>
+    </engines>
+
+    <js-module src="www/plugin.js" name="plugin">
+        <runs/>
+        <!-- This is the window variable name you want, like window.MyCordovaPlugin -->
+        <clobbers target="window.FirstCordovaPlugin" />
+    </js-module>
+	
     <!-- android -->
     <platform name="android">
-      <js-module src="www/plugin.js" name="plugin">
-        <runs/>
-
-        <!-- This is the window variable name you want, like window.MyCordovaPlugin -->
-        <clobbers target="FirstCordovaPlugin" />
-      </js-module>
       <config-file target="res/xml/config.xml" parent="/*">
         <feature name="FirstCordovaPlugin">
           <param name="android-package" value="com.example.MyCordovaPlugin" />
@@ -30,10 +37,6 @@
 
     <!-- ios -->
     <platform name="ios">
-        <js-module src="www/plugin.js" name="plugin">
-            <runs/>
-            <clobbers target="FirstCordovaPlugin" />
-        </js-module>
         <config-file target="config.xml" parent="/*">
             <feature name="FirstCordovaPlugin">
                 <param name="ios-package" value="MyCordovaPlugin" onload="true" />

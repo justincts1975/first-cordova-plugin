@@ -1,6 +1,7 @@
 {
   "name": "first-cordova-plugin",
   "version": "1.0.0",
+  "description": "My first cordova plugin.",
   "cordova": {
     "id": "first-cordova-plugin",
     "platforms": [
@@ -8,5 +9,17 @@
       "ios",
     ]
   },
-  "description": "My first cordova plugin."
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/justincts1975/first-cordova-plugin.git"
+   },
+   "engines": [{
+         "name": "cordova",
+         "version": ">=3.4.0"
+      }
+   ],
+   "dependencies": {
+      "@ionic-native/core": "^5.32.0",
+      "gulp": "^4.0.2"
+   }
 }
