@@ -1,15 +1,14 @@
-
-//var exec = require('cordova/exec');
-
+var exec = require("cordova/exec");
 var PLUGIN_NAME = 'FirstCordovaPlugin';
 
 var FirstCordovaPlugin = {
   echo: function(phrase, cb) {
-    cordova.exec(cb, null, PLUGIN_NAME, 'echo', [phrase]);
-	
+    exec(cb, null, PLUGIN_NAME, 'echo', [phrase]);
+	return true;
   },
   getDate: function(cb) {
-    cordova.exec(cb, null, PLUGIN_NAME, 'getDate', []);
+    exec(cb, null, PLUGIN_NAME, 'getDate', []);
+	return true;
   }
 };
 

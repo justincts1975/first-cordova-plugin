@@ -12,18 +12,20 @@
     <repo>https://github.com/justincts1975/first-cordova-plugin.git</repo>
 
     <engines>
-            <engine name="cordova" version=">=3.0.0" />
+        <engine name="cordova" version=">=7.1.0"/>
+        <engine name="cordova-android" version=">=7.0.0"/>
+        <engine name="cordova-ios" version=">=4.5.0"/>
     </engines>
 	
+	<js-module src="www/FirstCordovaPlugin.js" name="FirstCordovaPlugin">
+		<clobbers target="window.plugins.FirstCordovaPlugin" />
+    </js-module>
+	
     <!-- android -->
-    <platform name="android">	
-		<js-module src="www/plugin.js" name="plugin">
-			<clobbers target="plugins.FirstCordovaPlugin" />
-		</js-module>
-      <config-file target="config.xml" parent="/*">
+    <platform name="android">
+      <config-file target="res/xml/config.xml" parent="/*">
         <feature name="FirstCordovaPlugin">
           <param name="android-package" value="com.example.FirstCordovaPlugin" />
-          <param name="onload" value="true" />
         </feature>
       </config-file>
 
@@ -31,13 +33,10 @@
     </platform>
 
     <!-- ios -->
-    <platform name="ios">	
-		<js-module src="www/plugin.js" name="plugin">
-			<clobbers target="plugins.FirstCordovaPlugin" />
-		</js-module>
+    <platform name="ios">
         <config-file target="config.xml" parent="/*">
             <feature name="FirstCordovaPlugin">
-                <param name="ios-package" value="FirstCordovaPlugin" onload="true" />
+                <param name="ios-package" value="FirstCordovaPlugin" />
             </feature>
         </config-file>
 
