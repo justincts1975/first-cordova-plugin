@@ -4,18 +4,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="first-cordova-plugin"
     version="1.0.0">
+	
     <name>First Cordova Plugin</name>
     <description>This is my first cordova plugin.</description>
     <license>MIT</license>
     <keywords></keywords>
     <repo>https://github.com/justincts1975/first-cordova-plugin.git</repo>
-    <issue>https://github.com/justincts1975/first-cordova-plugin/issues</issue>
-
-    <engines>
-        <engine name="cordova" version=">=7.1.0"/>
-        <engine name="cordova-android" version=">=7.0.0"/>
-        <engine name="cordova-ios" version=">=4.5.0"/>
-    </engines>
 
     <js-module src="www/plugin.js" name="plugin">
         <runs/>
@@ -25,7 +19,7 @@
 	
     <!-- android -->
     <platform name="android">
-      <config-file target="res/xml/config.xml" parent="/*">
+      <config-file target="config.xml" parent="/*">
         <feature name="FirstCordovaPlugin">
           <param name="android-package" value="com.example.MyCordovaPlugin" />
           <param name="onload" value="true" />

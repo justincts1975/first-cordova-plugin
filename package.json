@@ -2,13 +2,7 @@
   "name": "first-cordova-plugin",
   "version": "1.0.0",
   "description": "My first cordova plugin.",
-  "cordova": {
-    "id": "first-cordova-plugin",
-    "platforms": [
-      "android",
-      "ios",
-    ]
-  },
+ 
    "repository": {
       "type": "git",
       "url": "git+https://github.com/justincts1975/first-cordova-plugin.git"
