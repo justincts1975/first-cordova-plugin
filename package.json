@@ -15,15 +15,4 @@
         "type": "git",
         "url": "git+https://github.com/justincts1975/first-cordova-plugin.git"
     },
-   "engines": [{
-         "name": "cordova",
-         "version": ">=6.4.0"
-      },{
-         "name": "cordova-android",
-         "version": ">=6.0.0"
-      },{
-         "name": "cordova-ios",
-         "version": ">=4.3.0"
-      }
-   ]
 }

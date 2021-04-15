@@ -11,11 +11,11 @@
     <keywords></keywords>
     <repo>https://github.com/justincts1975/first-cordova-plugin.git</repo>
 
-    <engines>
+    <!--engines>
         <engine name="cordova" version=">=6.4.0"/>
         <engine name="cordova-android" version=">=6.0.0"/>
         <engine name="cordova-ios" version=">=4.3.0"/>
-    </engines>
+    </engines-->
 	
 	<js-module src="www/FirstCordovaPlugin.js" name="FirstCordovaPlugin">
 		<clobbers target="window.FirstCordovaPlugin" />
