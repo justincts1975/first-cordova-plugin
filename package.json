@@ -10,7 +10,7 @@
             "android"
         ]
     },
-	
+
     "repository": {
         "type": "git",
         "url": "git+https://github.com/justincts1975/first-cordova-plugin.git"

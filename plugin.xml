@@ -4,50 +4,50 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="first-cordova-plugin"
     version="1.0.0">
-	
-    <name>First Cordova Plugin</name>
-    <description>This is my first cordova plugin.</description>
-    <license>MIT</license>
-    <keywords></keywords>
-    <repo>https://github.com/justincts1975/first-cordova-plugin.git</repo>
 
-    <!--engines>
-        <engine name="cordova" version=">=6.4.0"/>
-        <engine name="cordova-android" version=">=6.0.0"/>
-        <engine name="cordova-ios" version=">=4.3.0"/>
-    </engines-->
-	
-	<js-module src="www/FirstCordovaPlugin.js" name="FirstCordovaPlugin">
-		<clobbers target="window.FirstCordovaPlugin" />
-    </js-module>
-	
-    <!-- android -->
-    <platform name="android">
-      <config-file target="res/xml/config.xml" parent="/*">
-        <feature name="FirstCordovaPlugin">
-          <param name="android-package" value="com.example.FirstCordovaPlugin" />
-        </feature>
-      </config-file>
+	<name>First Cordova Plugin</name>
+	<description>This is my first cordova plugin.</description>
+	<license>MIT</license>
+	<keywords/>
+	<repo>https://github.com/justincts1975/first-cordova-plugin.git</repo>
 
-      <source-file src="src/android/com/example/FirstCordovaPlugin.java" target-dir="src/com/example/" />
-    </platform>
 
-    <!-- ios -->
-    <platform name="ios">
-        <config-file target="config.xml" parent="/*">
-            <feature name="FirstCordovaPlugin">
-                <param name="ios-package" value="FirstCordovaPlugin" />
-            </feature>
-        </config-file>
+	<!-- android -->
+	<platform name="android">
+		<js-module src="www/FirstCordovaPlugin.js" name="FirstCordovaPlugin">
+			<runs />
+			<clobbers target="window.FirstCordovaPlugin" />
+		</js-module>
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="FirstCordovaPlugin">
+				<param name="android-package" value="com.example.FirstCordovaPlugin" />
+			</feature>
+		</config-file>
 
-        <header-file src="src/ios/FirstCordovaPlugin.h" />
-        <source-file src="src/ios/FirstCordovaPlugin.m" />
-    </platform>
+		<source-file src="src/android/com/example/FirstCordovaPlugin.java" target-dir="src/com/example/" />
+	</platform>
 
-    <!-- browser -->
-    <platform name="browser">
-        <js-module src="src/browser/FirstCordovaPluginMock.js" name="FirstCordovaPluginMock">
-            <runs />
-        </js-module>
-    </platform>
+	<!-- ios -->
+	<platform name="ios">
+		<js-module src="www/FirstCordovaPlugin.js" name="FirstCordovaPlugin">
+			<runs />
+			<clobbers target="window.FirstCordovaPlugin" />
+		</js-module>
+		<config-file target="config.xml" parent="/*">
+			<feature name="FirstCordovaPlugin">
+				<param name="ios-package" value="FirstCordovaPlugin" />
+			</feature>
+		</config-file>
+
+		<header-file src="src/ios/FirstCordovaPlugin.h" />
+		<source-file src="src/ios/FirstCordovaPlugin.m" />
+	</platform>
+
+	<!-- browser -->
+	<platform name="browser">
+		<js-module src="src/browser/FirstCordovaPluginMock.js" name="FirstCordovaPluginMock">
+			<runs />
+			<clobbers target="window.FirstCordovaPlugin" />
+		</js-module>
+	</platform>
 </plugin>
